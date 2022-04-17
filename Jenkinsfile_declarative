@@ -9,7 +9,7 @@ pipeline {
 				    python3 -m venv venv
 				    . venv/bin/activate
 				    pip3 install -r requirements.txt
-				    pytest -n ${NUMBER_THREADS} -v --url ${EXECUTOR} --opencart_url ${URL} --browser ${BROWSER} --bversion ${BROWSER_VERSION} --vnc --junitxml=report.xml
+				    pytest -n ${NUMBER_THREADS} -v --url ${EXECUTOR} --opencart_url ${OPENCART_URL} --browser ${BROWSER} --bversion ${BROWSER_VERSION} --vnc --junitxml=report.xml
                 """
             }
         }
