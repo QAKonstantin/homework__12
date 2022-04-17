@@ -1,0 +1,10 @@
+===> Test test_elements_laptops_category started at 2022-04-17 21:23:20.006648
+Browser:chrome
+===> Test test_elements_laptops_category finished at 2022-04-17 21:23:21.660268
+ound
+Check if link text Laptops & Notebooks was found
+Check if element ('css selector', '.input-group-addon') was found
+Check if element ('css selector', "[class='fa fa-th']") was found
+Check if element ('css selector', '.img-responsive') was found
+Check if element ('css selector', '.breadcrumb') was found
+Check if element ('id', 'content') is present
