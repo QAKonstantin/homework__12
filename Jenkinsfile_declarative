@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('test') {
+            steps {
+				sh """
+				    PATH=$PATH:$WORKSPACE
+				    python3 -m venv venv
+				    . venv/bin/activate
+				    pip3 install -r tests/requirements.txt
+				    pytest -n ${NUMBER_THREADS} -v --url ${EXECUTOR} --opencart_url ${URL} --browser ${BROWSER} --bversion ${BROWSER_VERSION} --vnc --junitxml=report.xml
+                """
+            }
+        }
+        stage('report-xml') {
+            steps {
+                junit 'report.xml'
+            }
+        }
+        stage('report-allure') {
+            steps {
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'allure-results']]
+                    ])
+                }
+            }
+        }
+        stage('email') {
+           steps {
+                emailext body: '$DEFAULT_CONTENT',
+                         subject: '$DEFAULT_SUBJECT',
+                         to: 'agridyaev.otus@gmail.com'
+           }
+        }
+    }
+}
