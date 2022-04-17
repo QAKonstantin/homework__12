@@ -1,0 +1,11 @@
+===> Test test_elements_monitors_category started at 2022-04-17 21:23:19.359722
+Browser:chrome
+===> Test test_elements_monitors_category finished at 2022-04-17 21:23:20.737456
+
+Check if link text Monitors was found
+Check if element ('css selector', '#column-left') was found
+Check if element ('css selector', '.img-responsive') was found
+Check if element ('css selector', '.breadcrumb') was found
+Check if element ('css selector', '#search') was found
+Check if element ('id', 'content') was found
+Check if element ('id', 'content') is present
