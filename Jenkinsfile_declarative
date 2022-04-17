@@ -8,7 +8,7 @@ pipeline {
 				    PATH=$PATH:$WORKSPACE
 				    python3 -m venv venv
 				    . venv/bin/activate
-				    pip3 install -r tests/requirements.txt
+				    pip3 install -r tests-declarative/requirements.txt
 				    pytest -n ${NUMBER_THREADS} -v --url ${EXECUTOR} --opencart_url ${URL} --browser ${BROWSER} --bversion ${BROWSER_VERSION} --vnc --junitxml=report.xml
                 """
             }
@@ -33,9 +33,9 @@ pipeline {
         }
         stage('email') {
            steps {
-                emailext body: '$DEFAULT_CONTENT',
+                emailtext body: '$DEFAULT_CONTENT',
                          subject: '$DEFAULT_SUBJECT',
-                         to: 'agridyaev.otus@gmail.com'
+                         to: 'qa.kkonstantin@gmail.com'
            }
         }
     }
