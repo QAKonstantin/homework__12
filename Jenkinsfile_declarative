@@ -33,7 +33,7 @@ pipeline {
         }
         stage('email') {
            steps {
-                emailtext body: '$DEFAULT_CONTENT',
+                emailext body: '$DEFAULT_CONTENT',
                          subject: '$DEFAULT_SUBJECT',
                          to: 'qa.kkonstantin@gmail.com'
            }
