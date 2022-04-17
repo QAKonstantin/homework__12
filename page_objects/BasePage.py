@@ -30,7 +30,7 @@ class BasePage:
     def __config_logger(self):
         self.logger = logging.getLogger(type(self).__name__)
         self.logger.addHandler(
-            logging.FileHandler(f"{Path(__file__).resolve().parent.parent}/logs/{self.browser.test_name}.log"))
+            logging.FileHandler(f"{Path(__file__).resolve().parent.parent}/tests/logs/{self.browser.test_name}.log"))
         self.logger.setLevel(level=self.browser.log_level)
 
     @allure.step("Input text: '{text}'")

@@ -69,7 +69,7 @@ def browser(request):
 
     test_name = request.node.name
 
-    logger.addHandler(logging.FileHandler(f"{Path(__file__).resolve().parent}/logs/{test_name}.log", mode='w'))
+    logger.addHandler(logging.FileHandler(f"{Path(__file__).resolve().parent}/tests/logs/{test_name}.log", mode='w'))
     logger.setLevel(level=log_level)
     logger.info("===> Test {} started at {}".format(test_name, datetime.datetime.now()))
     wd.test_name = test_name
@@ -77,7 +77,7 @@ def browser(request):
     logger.info("Browser:{}".format(browser, wd.capabilities))
 
     def fin():
-        with open('./allure-results/environment.properties', 'w') as f:
+        with open(f"{Path(__file__).resolve().parent}/allure-results/environment.properties", 'w') as f:
             f.write(f'Browser={browser}\n')
             f.write(f'Browser.Version={version}\n')
             f.write(f'Executor={executor}')
