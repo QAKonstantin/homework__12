@@ -1,0 +1,10 @@
+===> Test test_elements_phones_category started at 2022-04-17 21:23:20.026608
+Browser:chrome
+===> Test test_elements_phones_category finished at 2022-04-17 21:23:21.467231
+ found
+Check if element ('css selector', "[class='list-group-item active']") was found
+Check if element ('css selector', '#column-left') was found
+Check if element ('css selector', '#search') was found
+Check if element ('id', 'content') was found
+Check if element ('css selector', '#cart-total') was found
+Check if element ('css selector', '.breadcrumb') is present

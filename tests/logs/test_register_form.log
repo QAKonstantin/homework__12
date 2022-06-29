@@ -1,0 +1,24 @@
+Clicking element: ('link text', 'My Account')
+Check if element ('link text', 'My Account') was found
+Clicking element: ('link text', 'Register')
+Check if element ('link text', 'Register') was found
+Check if element ('id', 'input-firstname') was found
+Input 'Adam'
+Check if element ('id', 'input-lastname') was found
+Input 'Jeferson'
+Check if element ('id', 'input-email') was found
+Input 'esuhlrklof@gmail.com'
+Check if element ('id', 'input-telephone') was found
+Input '+79793727189'
+Check if element ('id', 'input-password') was found
+Input 'test'
+Check if element ('id', 'input-confirm') was found
+Input 'test'
+Check if element ('css selector', ".radio-inline input[value='1']") was found
+Check if element ('class name', 'agree') was found
+Check if element ('class name', 'modal-title') is present
+Check if element ('class name', 'close') was found
+Check if element ('name', 'agree') was found
+Check if element ('css selector', "input[type='submit'][value='Continue']") was found
+Check if element ('css selector', '#content > div > div > a') was found
+Check if element ('id', 'account-account') was found
